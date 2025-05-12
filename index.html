@@ -1,0 +1,66 @@
+<!-- // Question 1: Create a page with one input box and a button. When user enters a number and clicks the button, show whether it’s even or odd. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Even or Odd Checker</title>
+  </head>
+  <body>
+    <input type="text" name="Fname" id="inputbox" placeholder="Enter a number">
+    <button type="button" onclick="checkEvenOdd()">Click me</button>
+    <p id="result"></p>
+
+    <script>
+      function checkEvenOdd() {
+        const input = document.getElementById('inputbox').value;
+        const num = parseInt(input);
+
+        if (isNaN(num)) {
+          document.getElementById('result').textContent = "Please enter a valid number.";
+          return;
+        }
+
+        if (num % 2 === 0) {
+          document.getElementById('result').textContent = "Even number";
+        } else {
+          document.getElementById('result').textContent = "Odd number";
+        }
+      }
+
+    // Question 2: Compare two numbers and return the greater
+      function getGreaterNumber(a, b) {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+
+// Example:
+console.log(getGreaterNumber(10, 20)); // Output: 20
+
+// Question 3: Greet based on time
+function greetUser() {
+  const hour = new Date().getHours();
+  let greeting;
+
+  if (hour < 12) {
+    greeting = "Good Morning!";
+  } else if (hour < 17) {
+    greeting = "Good Afternoon!";
+  } else if (hour < 20) {
+    greeting = "Good Evening!";
+  } else {
+    greeting = "Good Night!";
+  }
+
+  console.log(greeting);
+}
+
+greetUser();
+
+
+
+
+    </script> 
+  </body>
+</html>
